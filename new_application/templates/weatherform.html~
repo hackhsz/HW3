@@ -1,0 +1,12 @@
+<html>
+<body>
+
+<form action="http://localhost:5000/weatherresult" method="GET">
+  Search City's weather quality for:<br>
+  <input type="text" name="city" value="Beijing">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

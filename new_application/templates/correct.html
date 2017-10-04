@@ -1,0 +1,6 @@
+<ul>
+    {% for r in datas %}
+        <li>
+        <h2>Hourly Data for {{r['parameter']}} is {{r['value']}} {{r['unit']}}</h2>
+    {% endfor %}
+</ul>
