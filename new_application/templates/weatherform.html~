@@ -3,7 +3,11 @@
 
 <form action="http://localhost:5000/weatherresult" method="GET">
   Search City's weather quality for:<br>
-  <input type="text" name="city" value="Beijing">
+  <input type="text" name="city" value="Beijing"><br>
+  <input type="radio" name="indexx" value="pm25" checked>PM2.5<br>
+  <input type="radio" name="indexx" value="pm10">PM10.0<br>
+  <input type="radio" name="indexx" value="so2">SO2<br>
+  <input type="radio" name="indexx" value="o3">O3<br>
   <br><br>
   <input type="submit" value="Submit">
 </form>

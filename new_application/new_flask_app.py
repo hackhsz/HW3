@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 import requests
 import json
 import pdb
-#app.debug = True
 
 
 
@@ -28,11 +27,10 @@ def render_2():
         resp = requests.get("https://api.openaq.org/v1/measurements?",params =temp)
         
         data = json.loads(resp.text)
-        
         if not data['results']:
             return render_template('flase.html',gas=option,city=temp["city"])
         else:
             return render_template('correct.html',datas=data['results'])
-    )
+    
 if __name__ == '__main__':
     app.run()

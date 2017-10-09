@@ -47,7 +47,7 @@ def render_4(artist_name):
         result = request.args
         params = {}
         params['term'] = artist_name
-        params['limit'] = 5
+        params['limit'] = 4
         resp = requests.get('https://itunes.apple.com/search?',params =params)
         data = json.loads(resp.text)
         

@@ -1,5 +1,4 @@
 <ul>
-  <h1> Here is the data for {{datas[0]["city"]}}</h1>
     {% for r in datas %}
         <li>
         <h2>Hourly Data for {{r['parameter']}} is {{r['value']}} {{r['unit']}}</h2>

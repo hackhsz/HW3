@@ -25,26 +25,17 @@ def render_2():
         option = result.get('indexx')
         temp["parameter"]=option
         temp["city"]=result.get('city')
+#        pdb.set_trace()
+ #       print(temp["city"])
         resp = requests.get("https://api.openaq.org/v1/measurements?",params =temp)
         
         data = json.loads(resp.text)
-        
-        #value2 =data['results'][1]['value']
-        #value3= data['results'][2]['value']
-        
-        #haha = {}
-        #haha['v1'] = value1
-       # haha['v2'] = value2
-       # haha['v3']=value3
-        
-        #haha['city']=temp['city']
-        
-        #pdb.set_trace()
-        #print(data['results'])
+#        pdb.set_trace()
+ #       print(data['results'])
         if not data['results']:
             return render_template('flase.html',gas=option,city=temp["city"])
         else:
             return render_template('correct.html',datas=data['results'])
-        #print(option)
+    
 if __name__ == '__main__':
     app.run()
